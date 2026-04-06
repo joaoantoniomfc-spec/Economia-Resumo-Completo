@@ -1,0 +1,370 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+.doc { max-width: 800px; padding: 1.5rem 0; }
+.header { border-bottom: 2px solid #1D9E75; padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.header h1 { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+.header p { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; }
+.badge { display: inline-block; background: #E1F5EE; color: #0F6E56; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-weight: 500; }
+.section { margin-bottom: 1.5rem; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+.section-header { background: var(--color-background-secondary); padding: 10px 16px; display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.section-header h2 { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+.section-header .tag { font-size: 11px; color: var(--color-text-secondary); }
+.section-body { padding: 14px 16px; background: var(--color-background-primary); }
+.topic { margin-bottom: 1rem; }
+.topic h3 { font-size: 13px; font-weight: 500; color: #0F6E56; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+.topic p, .topic li { font-size: 14px; color: var(--color-text-primary); line-height: 1.65; }
+.topic ul { padding-left: 1.2rem; }
+.topic li { margin-bottom: 3px; }
+.definition { background: var(--color-background-secondary); border-left: 3px solid #1D9E75; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; font-size: 14px; line-height: 1.65; color: var(--color-text-primary); }
+.table-wrap { overflow-x: auto; margin: 10px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { background: var(--color-background-secondary); font-weight: 500; padding: 7px 10px; text-align: left; border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); }
+td { padding: 7px 10px; border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; }
+.exer { background: #E6F1FB; border: 0.5px solid #B5D4F4; border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
+.exer .q { font-size: 14px; font-weight: 500; color: #0C447C; margin-bottom: 8px; }
+.exer .a { font-size: 14px; color: var(--color-text-primary); line-height: 1.65; border-top: 0.5px solid #B5D4F4; padding-top: 8px; margin-top: 2px; }
+.exer .a-label { font-size: 11px; font-weight: 500; color: #185FA5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 99px; margin-right: 4px; margin-bottom: 4px; }
+.pill-blue { background: #E6F1FB; color: #185FA5; }
+.pill-teal { background: #E1F5EE; color: #0F6E56; }
+.chevron { font-size: 12px; transition: transform 0.2s; }
+.collapsed .chevron { transform: rotate(-90deg); }
+.collapsed .section-body { display: none; }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+.aula-tag { font-size: 11px; color: var(--color-text-secondary); font-weight: 500; margin-bottom: 8px; letter-spacing: 0.03em; }
+</style>
+
+<div class="doc">
+  <div class="header">
+    <h1>Resumo para Prova — Economia <span class="badge">Prof. Ademar</span></h1>
+    <p>Baseado nas anotações de aula e exercícios respondidos</p>
+  </div>
+
+  <!-- SEÇÃO 1: CONCEITOS FUNDAMENTAIS -->
+  <div class="section" id="s1">
+    <div class="section-header" onclick="toggle('s1')">
+      <h2>1. Conceitos Fundamentais de Economia</h2>
+      <span class="tag">Aula 24/02</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="topic">
+        <h3>O que é Economia?</h3>
+        <div class="definition">A economia é a <strong>ciência da escolha</strong>: como indivíduos, empresas e governos alocam recursos escassos para satisfazer o máximo de necessidades possível.</div>
+        <ul>
+          <li><strong>Microeconomia:</strong> decisões individuais e de empresas (ex: definir preço de um produto).</li>
+          <li><strong>Macroeconomia:</strong> análise do todo — inflação, desemprego, PIB, comércio internacional.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Lei da Escassez</h3>
+        <div class="definition">As necessidades humanas são <strong>ilimitadas</strong>, mas os recursos para satisfazê-las são <strong>finitos</strong>. O objetivo econômico é produzir o máximo possível com os recursos disponíveis.</div>
+        <p>Exemplo: minério de ferro → chapas de aço → produto final (carro). Quanto mais transformação, mais <em>escasso e valioso</em> o produto.</p>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Problemas Econômicos Básicos</h3>
+        <ul>
+          <li><strong>O que produzir?</strong> — Escolha dos produtos (carros, alimentos, vestuário…).</li>
+          <li><strong>Quanto produzir?</strong> — Definição das quantidades para atender a demanda.</li>
+          <li><strong>Como produzir?</strong> — Processo técnico ou tecnológico?</li>
+          <li><strong>Para quem produzir?</strong> — Distribuição da renda e acesso aos bens.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Processo Técnico x Processo Tecnológico</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Característica</th><th>Processo Técnico</th><th>Processo Tecnológico</th></tr>
+            <tr><td>Base</td><td>Empírica (experiência)</td><td>Científica (inovação)</td></tr>
+            <tr><td>Objetivo</td><td>Executar com precisão</td><td>Otimizar e gerar novos resultados</td></tr>
+            <tr><td>Evolução</td><td>Lenta, por repetição</td><td>Rápida, por descobertas</td></tr>
+            <tr><td>Exemplo</td><td>Padeiro artesanal (técnica manual)</td><td>Indústria de panificação com sensores e automação</td></tr>
+          </table>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Estado de Bem-Estar Social (Welfare State)</h3>
+        <div class="definition">Modelo onde o governo garante proteção social e serviços básicos (saúde, educação, habitação), reduzindo desigualdades do capitalismo. Financiado por alta carga tributária. Exemplos: países nórdicos (Noruega, Dinamarca, Suécia). Teórico: John Maynard Keynes.</div>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Nikolai Kondratiev — Ciclos Longos</h3>
+        <p>Economista russo que identificou <strong>ondas de longo prazo</strong> (~50-60 anos) ligadas a inovações tecnológicas.</p>
+        <ul>
+          <li>1º ciclo (1780s): Revolução Industrial — algodão e ferro.</li>
+          <li>2º (1840s): Ferrovias e aço.</li>
+          <li>3º (1890s): Eletricidade, química, motor a combustão.</li>
+          <li>4º (1940s): Eletrônica e petroquímica.</li>
+          <li>5º (1980s–hoje): Tecnologia da Informação e Internet.</li>
+        </ul>
+        <p style="margin-top:6px; font-size:13px; color:var(--color-text-secondary);">Kondratiev foi executado em 1938 por Stalin, pois suas ideias contrariavam o dogma soviético de colapso imediato do capitalismo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 2: HISTÓRIA DO PENSAMENTO ECONÔMICO -->
+  <div class="section" id="s2">
+    <div class="section-header" onclick="toggle('s2')">
+      <h2>2. História do Pensamento Econômico</h2>
+      <span class="tag">Aulas 27/02 e 03/03</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="topic">
+        <h3>Primeiras manifestações econômicas</h3>
+        <ul>
+          <li>Era Neolítica (8.000 a.C.): primeiros problemas econômicos ligados à sobrevivência — produção de alimentos, agricultura e cerâmica rudimentar.</li>
+          <li>Idades do Bronze (3.300 a.C.) e do Ferro (1.200 a.C.): conquistas de terras, organização social e novas formas de produção.</li>
+          <li>Povos primitivos sem contato chegaram às mesmas soluções — as primeiras manifestações eram artes rupestres que registravam práticas econômicas.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Organizações Econômicas no Mediterrâneo</h3>
+        <ul>
+          <li><strong>Egito e Mesopotâmia:</strong> economia baseada em grandes rios — irrigação e agricultura intensiva.</li>
+          <li><strong>Fenícios e Gregos (Tiro, Sidon, Rodes etc.):</strong> usavam a terra como ponto de apoio e o <em>comércio marítimo e as trocas internacionais</em> como motor da economia. As rotas comerciais eram predominantemente litorâneas.</li>
+          <li><strong>Império Romano:</strong> no auge, possuía 80 mil km de estradas (Vias Romanas). Economia baseada na filosofia e moral, sem preocupações com PIB ou inflação como as atuais.</li>
+          <li><strong>Nota importante:</strong> A Europa era sub-representada nas rotas comerciais da época por ser subdesenvolvida.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 3: IDADE MÉDIA -->
+  <div class="section" id="s3">
+    <div class="section-header" onclick="toggle('s3')">
+      <h2>3. Economia na Idade Média (Séc. V ao XV)</h2>
+      <span class="tag">Aula 03/03</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="topic">
+        <h3>Alta Idade Média (Séc. V–X): Feudalismo</h3>
+        <ul>
+          <li>Produção focada em <strong>subsistência</strong>, não em venda.</li>
+          <li>Riqueza medida pela posse de terras; dinheiro quase inexistente.</li>
+          <li>Camponeses (servos) pagavam tributos: <strong>Corveia</strong> (trabalho gratuito), <strong>Talha</strong> (parte da produção) e <strong>Banalidades</strong> (taxa para usar moinho/forno).</li>
+          <li>Artesão: capacidade extremamente limitada — no máximo 1 aprendiz.</li>
+          <li>Igreja: excluía os pobres; universidades pertenciam à Igreja e eram acessíveis apenas à nobreza e ao clero.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Baixa Idade Média (Séc. XI–XV): Burgos e Comércio</h3>
+        <ul>
+          <li>Inovações: <strong>charrua</strong> (arado de ferro) e <strong>rotação trienal</strong> geraram excedente agrícola.</li>
+          <li>Surgem as <strong>feiras medievais</strong> e os <strong>burgos</strong> (cidades ao redor de castelos/mosteiros).</li>
+          <li><strong>Burguesia</strong>: habitantes dos burgos, hierarquia baseada em dinheiro, não em sangue.</li>
+          <li><strong>Corporações de Ofício:</strong> carreira em 3 etapas: Aprendiz → Oficial (salário diário) → Mestre (apresentava uma "obra-prima").</li>
+          <li><strong>Sistema bancário nascente:</strong> Cambistas trocavam moedas em "bancos" de madeira nas feiras. Surgem as <strong>Letras de Câmbio</strong> (equivalente ao PIX medieval). <em>Bancarrota</em> = banco quebrado fisicamente por fraude.</li>
+          <li>Igreja condenava a <strong>usura</strong> (juros) — os banqueiros driblavam com "taxas de câmbio" ou "presentes".</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Crise do Século XIV</h3>
+        <ul>
+          <li><strong>Peste Negra:</strong> eliminou ~1/3 da população europeia, gerando escassez de mão de obra.</li>
+          <li>Fome por esgotamento do solo e mudanças climáticas.</li>
+          <li>Guerras (ex: Guerra dos Cem Anos).</li>
+          <li>Ironicamente, a escassez de trabalhadores deu mais poder aos camponeses → acelerou o fim do feudalismo.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Indústria Têxtil no Séc. XV</h3>
+        <p>O tecido era o "petróleo" da Idade Média. Principais polos: <strong>Flandres</strong> (lã fina) e <strong>Norte da Itália</strong> (seda e veludo). Inglaterra exportava lã bruta, depois passou a produzir tecidos.</p>
+        <p style="margin-top:6px;"><strong>Putting-out System</strong>: mercador levava lã bruta para camponeses processarem em casa → embrião da Revolução Industrial.</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Ferramenta medieval</th><th>Equivalente moderno</th></tr>
+            <tr><td>Banco (mesa de câmbio)</td><td>Agência bancária</td></tr>
+            <tr><td>Letra de Câmbio</td><td>TED / PIX / Cartão</td></tr>
+            <tr><td>Partidas Dobradas (Luca Pacioli)</td><td>Balanço Patrimonial</td></tr>
+            <tr><td>Câmbio de moedas</td><td>Mercado Forex</td></tr>
+          </table>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>São Tomás de Aquino e a Ética Econômica</h3>
+        <ul>
+          <li><strong>Justo Preço:</strong> o vendedor não deve lucrar com a necessidade urgente do comprador; preço deve ser equivalente ao valor real.</li>
+          <li><strong>Condenação da usura:</strong> dinheiro não "gera frutos" por si só; cobrar juros era "vender o tempo", que pertence a Deus.</li>
+          <li><strong>Propriedade privada com destinação comum:</strong> posse privada, mas uso deve ser compartilhado em extrema necessidade.</li>
+          <li>Legado: influenciou a <em>Escola de Salamanca</em>, que criou ponte para o liberalismo econômico.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 4: MERCANTILISMO E NAVEGAÇÕES -->
+  <div class="section" id="s4">
+    <div class="section-header" onclick="toggle('s4')">
+      <h2>4. Mercantilismo e Grandes Navegações</h2>
+      <span class="tag">Aula 06/03</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="topic">
+        <h3>Pilares do Mercantilismo</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Pilar</th><th>O que significava na prática</th></tr>
+            <tr><td>Metalismo</td><td>Acúmulo de ouro e prata como reserva de riqueza e guerra.</td></tr>
+            <tr><td>Protecionismo</td><td>Taxar produtos estrangeiros para proteger a produção nacional.</td></tr>
+            <tr><td>Monopólio</td><td>Apenas o Rei ou burgueses autorizados podiam explorar certas rotas/produtos.</td></tr>
+            <tr><td>Expansionismo</td><td>Buscar novas terras para extrair matéria-prima barata (colonialismo).</td></tr>
+          </table>
+        </div>
+        <p style="margin-top:8px; font-size:13px; color:var(--color-text-secondary);">O "descobrimento" do Brasil e das Américas foi, no fundo, um projeto de investimento mercantilista.</p>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Espanhóis x Portugueses nas Américas</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Característica</th><th>Espanha</th><th>Portugal</th></tr>
+            <tr><td>Metais encontrados</td><td>Imediato (México e Peru)</td><td>Tardio (Minas Gerais)</td></tr>
+            <tr><td>Principal recurso</td><td>Prata e ouro</td><td>Açúcar (inicial) e ouro (posterior)</td></tr>
+            <tr><td>Modelo econômico</td><td>Extração mineral direta</td><td>Plantations + mineração</td></tr>
+            <tr><td>Impacto na metrópole</td><td>Enriquecimento súbito / inflação</td><td>Estabilidade agrícola / dependência britânica</td></tr>
+          </table>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Revolução dos Preços</h3>
+        <p>O influxo de prata de Potosí (Bolívia) causou inflação generalizada na Europa: mais metal disponível → oferta de moeda supera produção de bens → preços sobem.</p>
+        <ul>
+          <li>Beneficiou a burguesia comercial.</li>
+          <li>Prejudicou nobreza (rendas fixas) e trabalhadores assalariados.</li>
+          <li>Espanha não converteu riqueza em indústria → dependia de importações da Inglaterra, Holanda e França.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Colonização do Brasil</h3>
+        <ul>
+          <li><strong>Capitanias Hereditárias:</strong> Terceirização do risco — Portugal dividiu o território em lotes e entregou a Donatários (particulares) para exploração. Apenas Pernambuco e São Vicente prosperaram.</li>
+          <li><strong>Modelo Plantation:</strong> grande propriedade + monocultura + mão de obra escravizada → primeiro florescimento econômico.</li>
+          <li><strong>Ciclos econômicos brasileiros:</strong> Pau-Brasil → Cana-de-Açúcar → Ouro → Café.</li>
+          <li><strong>Jesuítas:</strong> chegaram em 1549 com Tomé de Souza; fundaram colégios (incluindo o Colégio de São Paulo, origem da cidade); expulsos em 1759 pelo Marquês de Pombal.</li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Ciclos Econômicos</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Fase</th><th>Características</th></tr>
+            <tr><td>Expansão</td><td>Crescimento da produção, emprego e consumo; inflação pode subir gradualmente.</td></tr>
+            <tr><td>Pico (Auge)</td><td>Máxima produção e emprego; pressão inflacionária intensa; sinais de saturação.</td></tr>
+            <tr><td>Recessão</td><td>Queda no consumo, investimento e produção; aumento do desemprego.</td></tr>
+            <tr><td>Depressão/Vale</td><td>Nível mínimo; alto desemprego; antecede nova expansão.</td></tr>
+          </table>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="topic">
+        <h3>Política do Café com Leite (1889–1930)</h3>
+        <ul>
+          <li>Alternância de poder entre SP (café - PRP) e MG (leite/política - PRM).</li>
+          <li><strong>Política dos Governadores:</strong> presidentes apoiavam governadores em troca de congressistas favoráveis.</li>
+          <li><strong>Voto de Cabresto:</strong> manipulação eleitoral pelo coronelismo.</li>
+          <li><strong>Convênio de Taubaté (1906):</strong> governo federal comprava excedente de café para manter preços altos.</li>
+          <li><strong>Fim:</strong> Washington Luís quebrou o acordo apoiando outro paulista (Júlio Prestes) → Revolução de 1930.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 5: EXERCÍCIOS -->
+  <div class="section" id="s5">
+    <div class="section-header" onclick="toggle('s5')">
+      <h2>5. Exercícios Respondidos</h2>
+      <span class="tag">Lista de tarefas</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">
+
+      <div class="exer">
+        <div class="q">Q1 — Qual a diferença entre escassez e pobreza?</div>
+        <div class="a-label">Resposta</div>
+        <div class="a">A <strong>escassez</strong> é inevitável e universal — mesmo uma pessoa rica não pode criar mais de 24 horas no dia ou fazer uma fábrica superar sua capacidade máxima. Exemplo: crise das memórias RAM, onde 70% dos chips foram comprados por data centers.<br><br>
+        A <strong>pobreza</strong> está ligada ao <em>acesso</em> aos recursos, não à sua quantidade absoluta. O mundo produz comida suficiente para todos, mas muitos passam fome por falta de acesso. Pobreza = ausência de condições básicas de vida.</div>
+      </div>
+
+      <div class="exer">
+        <div class="q">Q2 — Como um produto pode ser caro sem ser escasso?</div>
+        <div class="a-label">Resposta</div>
+        <div class="a">Por <strong>estratégia de posicionamento</strong>: marcas de luxo restringem deliberadamente a oferta com listas de espera e exigência de relacionamento prévio (ex: relógios, joias), criando escassez artificial para valorizar o produto.<br><br>
+        Também pode ocorrer por <strong>escassez percebida</strong>: antes de uma prova, uma caneta comum vira artigo raro para quem não tem. O produto não é escasso, mas a urgência da situação eleva seu valor percebido.</div>
+      </div>
+
+      <div class="exer">
+        <div class="q">Q3 — O modelo colonial ainda impacta a economia brasileira hoje?</div>
+        <div class="a-label">Resposta</div>
+        <div class="a">Sim. Até hoje o Brasil exporta majoritariamente <em>commodities</em> (ferro, petróleo, soja, café) e importa produtos de alto valor agregado (carros, celulares, maquinário). O modelo colonial atrasou o desenvolvimento industrial, pois não havia interesse em industrializar uma colônia cujas riquezas eram extraídas para fora. Quando a industrialização chegou, o Brasil enfrentou concorrência de indústrias externas já consolidadas.</div>
+      </div>
+
+      <div class="exer">
+        <div class="q">Q4 — Como a Crise de 29 e a 2ª Guerra impulsionaram a industrialização brasileira?</div>
+        <div class="a-label">Resposta</div>
+        <div class="a"><strong>Crise de 29:</strong> o Brasil dependia da exportação de café para os EUA. Com a crise, as compras caíram, o país ficou sem dólares e sem poder importar — o que forçou a produção nacional para substituir importações.<br><br>
+        <strong>2ª Guerra:</strong> países beligerantes redirecionaram fábricas para armamentos (e indústrias eram alvo de bombardeios). O Brasil novamente precisou produzir internamente, investindo em aço e energia.</div>
+      </div>
+
+      <div class="exer">
+        <div class="q">Q5 — Por que Portugal não retinha a riqueza extraída do Brasil?</div>
+        <div class="a-label">Resposta</div>
+        <div class="a">Portugal não era industrializado e comprava mais do que vendia. Com o mercantilismo, as nações passaram a exigir pagamento em ouro/prata, forçando Portugal a aumentar os impostos no Brasil para pagar a Inglaterra. A riqueza saía do Brasil sem retornar: como a colônia não era industrializada por interesse da metrópole, nada era reinvestido nela — a riqueza não se acumulava no território.</div>
+      </div>
+
+      <div class="exer">
+        <div class="q">Q6 — Qual foi o papel das estatais no desenvolvimento econômico brasileiro?</div>
+        <div class="a-label">Resposta</div>
+        <div class="a">As estatais assumiram investimentos de longo prazo que o setor privado não conseguia fazer. Com a população dos grandes centros urbanos superando as zonas rurais, o Estado criou a "base da pirâmide": construiu estradas, usinas de energia, ampliou a produção de aço e petróleo. Isso viabilizou o surgimento de indústrias, que por sua vez aumentaram o consumo urbano, movimentando ainda mais a economia.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SEÇÃO 6: GLOSSÁRIO -->
+  <div class="section" id="s6">
+    <div class="section-header" onclick="toggle('s6')">
+      <h2>6. Glossário Rápido</h2>
+      <span class="tag">Termos-chave</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <div class="definition"><strong>Escassez:</strong> recursos finitos diante de necessidades infinitas.</div>
+        <div class="definition"><strong>Usura:</strong> cobrança de juros sobre empréstimos (condenada pela Igreja medieval).</div>
+        <div class="definition"><strong>Metalismo:</strong> riqueza de um país medida por seus estoques de ouro e prata.</div>
+        <div class="definition"><strong>Bancarrota:</strong> "banco quebrado" — origem: mesa do cambista destruída por fraude.</div>
+        <div class="definition"><strong>Corveia:</strong> trabalho gratuito do servo nas terras do senhor feudal.</div>
+        <div class="definition"><strong>Letra de Câmbio:</strong> documento de transferência de valores à distância (ancestral do cartão/PIX).</div>
+        <div class="definition"><strong>Welfare State:</strong> Estado que garante proteção social mínima a todos os cidadãos.</div>
+        <div class="definition"><strong>Plantation:</strong> grande propriedade + monocultura + trabalho escravo (modelo colonial).</div>
+        <div class="definition"><strong>Putting-out System:</strong> mercador dá matéria-prima para camponeses processarem em casa (pré-indústria).</div>
+        <div class="definition"><strong>Tratado de Tordesilhas:</strong> divisão do mundo entre Portugal e Espanha (1494).</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('collapsed');
+}
+</script>
